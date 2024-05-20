@@ -1,9 +1,10 @@
 package co.com.testscreenplay.userinterfaces;
 
+import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
-public class LoginPage {
+public class LoginPage extends PageObject {
 
     public static final Target LBL_USERNAME = Target.the("getLblUsername")
             .located(By.id("user-name"));

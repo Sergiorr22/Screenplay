@@ -49,6 +49,7 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}"
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
     implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}"
+    implementation "io.github.bonigarcia:webdrivermanager:5.0.3"
     implementation "ch.qos.logback:logback-classic:${logVersion}"
     implementation "ch.qos.logback:logback-core:${logVersion}"
     implementation group: 'com.sikulix', name: 'sikulixapi', version: '2.0.5'
