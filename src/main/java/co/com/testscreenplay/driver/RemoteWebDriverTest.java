@@ -1,7 +1,5 @@
 package co.com.testscreenplay.driver;
 
-import co.com.testscreenplay.Main;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
