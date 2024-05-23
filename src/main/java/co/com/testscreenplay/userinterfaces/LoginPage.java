@@ -14,6 +14,8 @@ public class LoginPage extends PageObject {
             .located(By.id("login-button"));
     public static final Target LBL_PRODUCTS = Target.the("getLblProducts").
             located(By.xpath("//div[.='Products']"));
+    public static final Target ERROR_LOGIN = Target.the("getErrorLogin").
+            located(By.xpath("//div[@id='login_button_container']//form/h3"));
 
 
 }

@@ -1,6 +1,7 @@
 package co.com.testscreenplay.stepdefinitions;
 
 
+import co.com.testscreenplay.questions.ValidateText;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -11,6 +12,10 @@ import net.thucydides.core.annotations.Managed;
 import org.openqa.selenium.WebDriver;
 
 import static co.com.testscreenplay.tasks.LoginTask.withCredentials;
+import static co.com.testscreenplay.userinterfaces.LoginPage.*;
+
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.Matchers.equalTo;
 
 
 public class LoginStepDefinitions {
@@ -29,5 +34,13 @@ public class LoginStepDefinitions {
     }
     @Then("permite ingresar")
     public void permiteIngresar() {
+        user.should(seeThat(ValidateText.of(LBL_PRODUCTS), equalTo("Products")));
     }
+
+    @Then("no permite ingresar")
+    public void noPermiteIngresar() {
+        user.should(seeThat(ValidateText.of(ERROR_LOGIN), equalTo("Epic sadface: Sorry, this user has been locked out.")));
+    }
+
+
 }

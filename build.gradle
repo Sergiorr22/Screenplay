@@ -41,7 +41,7 @@ buildscript {
 
 dependencies {
 
-    implementation ("net.serenity-bdd:serenity-core:${serenityCoreVersion}")
+    implementation ('net.serenity-bdd:serenity-core:' + serenityCoreVersion)
     implementation "net.serenity-bdd:serenity-junit5:${serenityCoreVersion}"
     implementation "net.serenity-bdd:serenity-cucumber:${serenityCoreVersion}"
     implementation "net.serenity-bdd:serenity-rest-assured:${serenityCoreVersion}"
@@ -50,8 +50,8 @@ dependencies {
     implementation "net.serenity-bdd:serenity-screenplay-webdriver:${serenityCoreVersion}"
     implementation "net.serenity-bdd:serenity-screenplay-rest:${serenityCoreVersion}"
     implementation "io.github.bonigarcia:webdrivermanager:5.0.3"
-    implementation "ch.qos.logback:logback-classic:${logVersion}"
-    implementation "ch.qos.logback:logback-core:${logVersion}"
+    implementation 'ch.qos.logback:logback-classic:' + logVersion
+    implementation 'ch.qos.logback:logback-core:' + logVersion
     implementation group: 'com.sikulix', name: 'sikulixapi', version: '2.0.5'
     implementation group: 'com.itextpdf', name: 'itextpdf', version: '5.5.12'
     implementation 'com.google.code.gson:gson:2.2.2'
@@ -98,4 +98,4 @@ serenity {
 //aggregate.finalizedBy ejecutarPDFCreator
 //
 //gradle.startParameter.continueOnFailure = true
-//test.finalizedBy(aggregate)
+test.finalizedBy(aggregate)

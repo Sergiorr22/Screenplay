@@ -13,11 +13,9 @@ public class ValidateText implements Question<String> {
     public ValidateText(Target txtValidation){
         this.txtValidation = txtValidation;
     }
-
     public static ValidateText of(Target txtValidation){
         return Instrumented.instanceOf(ValidateText.class).withProperties(txtValidation);
     }
-
     @Override
     public String answeredBy(Actor actor){
         return txtValidation.resolveFor(actor).getText();
