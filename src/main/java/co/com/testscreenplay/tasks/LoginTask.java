@@ -30,8 +30,8 @@ public class LoginTask implements Task {
         actor.attemptsTo(
                 Enter.theValue(username).into(LoginPage.LBL_USERNAME),
                 Enter.theValue(password).into(LoginPage.LBL_PASSWORD),
-                Click.on(LoginPage.BTN_LOGIN),
-                WaitUntil.the(LoginPage.LBL_PRODUCTS, isVisible()).forNoMoreThan(10).seconds()
+                Click.on(LoginPage.BTN_LOGIN)
+//                WaitUntil.the(LoginPage.LBL_PRODUCTS, isVisible()).forNoMoreThan(10).seconds()
         );
     }
 }

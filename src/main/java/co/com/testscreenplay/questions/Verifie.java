@@ -19,5 +19,5 @@ public class Verifie implements Question<String> {
 
     public String answeredBy(Actor actor){
         return validateBuy.resolveFor(actor).getText();
-    }
+    }git
 }

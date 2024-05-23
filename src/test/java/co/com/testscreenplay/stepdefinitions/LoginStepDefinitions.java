@@ -41,6 +41,4 @@ public class LoginStepDefinitions {
     public void noPermiteIngresar() {
         user.should(seeThat(ValidateText.of(ERROR_LOGIN), equalTo("Epic sadface: Sorry, this user has been locked out.")));
     }
-
-
 }
